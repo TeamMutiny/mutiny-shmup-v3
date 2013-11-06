@@ -20,6 +20,17 @@ public class ShootInDirection : MonoBehaviour {
 			newbullet.transform.LookAt(player.transform.position);
 		}
 	}
+	
+	void shootAtPoint(Vector3 point) {
+	
+		GameObject newbullet = (GameObject)Instantiate(bullet, gameObject.transform.position, Quaternion.identity);
+		
+		Transform t_point = new Transform(point);
+		
+		if(player != null) {
+			newbullet.transform.LookAt(t_point);
+		}
+	}
 }
 
 
