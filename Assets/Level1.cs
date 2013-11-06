@@ -9,6 +9,7 @@ public class Level1 : MonoBehaviour {
 	public float warningTime;
 	private GameObject boss = null;
 	private GameObject warning;
+	private bool warningDone = false;
 	// Use this for initialization
 	void Start () {
 		time = 0;
@@ -24,9 +25,12 @@ public class Level1 : MonoBehaviour {
 			Destroy(GameObject.Find("Spawner"));
 			boss = (GameObject) Instantiate(bossObject, new Vector3(0.0f,50.0f,-4.0f), Quaternion.identity);
 			boss.transform.Rotate(new Vector3(0.0f,180.0f,180.0f));
+			if(!warningDone){
 			warning = GameObject.Find("Warning");
 			warning.transform.position = new Vector3(0.5f,0.4851f,0f);
 			Destroy(warning, warningTime);
+			warningDone = true;
+			}
 		}
 		
 	}
