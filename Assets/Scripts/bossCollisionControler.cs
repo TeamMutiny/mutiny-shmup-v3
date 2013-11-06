@@ -7,7 +7,7 @@ public class bossCollisionControler : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		explosion = Resources.Load("Enemy explosion") as GameObject;
-		explosion.transform.localScale = new Vector3(3f,3f,3f);
+		explosion.transform.localScale = new Vector3(30f,30f,30f);
 	}
 	
 	// Update is called once per frame
