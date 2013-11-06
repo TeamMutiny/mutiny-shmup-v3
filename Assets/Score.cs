@@ -20,5 +20,7 @@ public class Score : MonoBehaviour {
 	void tappo(){
 		score++;
 	}
-	
+	void bossitappo(){
+		score += 100;
+	}
 }

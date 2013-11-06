@@ -19,12 +19,13 @@ public class bossCollisionControler : MonoBehaviour {
 		if(other.gameObject.tag == "bullet" || other.gameObject.tag == "Player") {
 			Destroy(other.gameObject);
 			hp--;
-			Debug.Log(hp);
+			//Debug.Log(hp);
 			if(hp < 0){
 				Object klooni = Instantiate(explosion,transform.position,transform.rotation);
 				Destroy(klooni,2);
 				Destroy(gameObject);
-				
+				GameObject foo = GameObject.Find("Score");
+				foo.SendMessage("bossitappo");
 			}
 			
 		}

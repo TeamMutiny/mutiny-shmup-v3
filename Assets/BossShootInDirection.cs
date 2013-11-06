@@ -12,7 +12,7 @@ public class BossShootInDirection : MonoBehaviour {
 	}
 	void Update(){
 		time += Time.deltaTime;
-		if(time > 0.1f){
+		if(time > 0.5f){
 			shootAtPlayer();
 			time = 0.0f;
 		}
