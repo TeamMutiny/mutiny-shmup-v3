@@ -3283,7 +3283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3110b83b55f264b86dcd8378621406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossTime: 50
+  bossTime: 40
   bossObject: {fileID: 100016, guid: 0b48d5b1335fea944b8ebc29b3a7b8d1, type: 2}
   warningTime: 10
 --- !u!4 &1825271839

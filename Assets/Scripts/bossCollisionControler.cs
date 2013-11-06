@@ -7,7 +7,7 @@ public class bossCollisionControler : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		explosion = Resources.Load("Enemy explosion") as GameObject;
-		explosion.transform.localScale = new Vector3(3f,3f,3f);
+		explosion.transform.localScale = new Vector3(30f,30f,30f);
 	}
 	
 	// Update is called once per frame
@@ -19,12 +19,13 @@ public class bossCollisionControler : MonoBehaviour {
 		if(other.gameObject.tag == "bullet" || other.gameObject.tag == "Player") {
 			Destroy(other.gameObject);
 			hp--;
-			Debug.Log(hp);
+			//Debug.Log(hp);
 			if(hp < 0){
 				Object klooni = Instantiate(explosion,transform.position,transform.rotation);
 				Destroy(klooni,2);
 				Destroy(gameObject);
-				
+				GameObject foo = GameObject.Find("Score");
+				foo.SendMessage("bossitappo");
 			}
 			
 		}
