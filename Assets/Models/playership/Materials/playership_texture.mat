@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Ship
-  m_Shader: {fileID: 20, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: playership_texture
+  m_Shader: {fileID: 9, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_SavedProperties:
     serializedVersion: 2
@@ -16,7 +16,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 91f7524167235ff4f937775839391538, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -28,21 +28,7 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Detail
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _DecalTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Cube
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -58,21 +44,17 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .078125
+        second: .289146543
       data:
         first:
           name: _Parallax
-        second: .0199999996
+        second: .0379104465
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: 0, g: .635294139, b: .587514341, a: .117647059}
+        second: {r: .739557862, g: .733564019, b: .831372559, a: .152941182}
       data:
         first:
           name: _SpecColor
-        second: {r: .5, g: .5, b: .5, a: 1}
-      data:
-        first:
-          name: _ReflectColor
-        second: {r: 1, g: 1, b: 1, a: .0862745121}
+        second: {r: .650980413, g: .650980413, b: .650980413, a: 1}
