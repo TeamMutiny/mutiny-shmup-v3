@@ -4,9 +4,11 @@ using System.Collections;
 public class bossCollisionControler : MonoBehaviour {
 	public int hp;
 	private GameObject explosion;
+	private GameObject bulletHit;
 	// Use this for initialization
 	void Start () {
 		explosion = Resources.Load("Enemy explosion") as GameObject;
+		bulletHit = Resources.Load("Projectile hit") as GameObject;
 		explosion.transform.localScale = new Vector3(30f,30f,30f);
 	}
 	
@@ -17,12 +19,15 @@ public class bossCollisionControler : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "bullet" || other.gameObject.tag == "Player") {
-			Destroy(other.gameObject);
 			hp--;
+		
+			Object bulletExpl = Instantiate(bulletHit,other.gameObject.transform.position,other.gameObject.transform.rotation);
+			Destroy(bulletExpl,2);
+			Destroy(other.gameObject);
 			//Debug.Log(hp);
 			if(hp < 0){
 				Object klooni = Instantiate(explosion,transform.position,transform.rotation);
-				Destroy(klooni,2);
+			    Destroy(klooni,2);
 				Destroy(gameObject);
 				GameObject foo = GameObject.Find("Score");
 				foo.SendMessage("bossitappo");
