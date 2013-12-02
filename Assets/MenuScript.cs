@@ -2,7 +2,13 @@
 using System.Collections;
 
 public class MenuScript : MonoBehaviour {
-
+	
+	public int x = 20;
+	public int y = 40;
+	public int width = 80;
+	public int height = 20;
+	public int spacing = 50;
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -15,12 +21,12 @@ public class MenuScript : MonoBehaviour {
 	
 	void OnGUI() {
 		GUI.skin = null;
-		if(GUI.Button(new Rect(20,40,80,20), "Play")) {
+		if(GUI.Button(new Rect(x,y+spacing*0,width,height), "Play")) {
 			// New game
 		}
 
 		// Make the second button.
-		if(GUI.Button(new Rect(20,70,80,20), "Quit")) {
+		if(GUI.Button(new Rect(x,y+spacing*1,width,height), "Quit")) {
 			// Quit
 		}
 	}
