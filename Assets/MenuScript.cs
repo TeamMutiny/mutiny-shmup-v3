@@ -22,6 +22,7 @@ public class MenuScript : MonoBehaviour {
 	void OnGUI() {
 		GUI.skin = null;
 		if(GUI.Button(new Rect(x,y+spacing*0,width,height), "Play")) {
+			Application.LoadLevel(1);
 			// New game
 		}
 

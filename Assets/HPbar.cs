@@ -21,13 +21,23 @@ public class HPbar : MonoBehaviour {
 		text.guiText.text = ""+hp;
 	}	
 	
-	void GotHit(float damage){		
+
+	void GameOverMan(){
+		Application.LoadLevel(0);
+	}
+	
+	void GotHit(float damage){	
+		
 		hp -= damage;
 		if(hp <= 0){
 			Object klooni = Instantiate(explosion,GameObject.Find("spaceship").transform.position,GameObject.Find("spaceship").transform.rotation);
 			Destroy(GameObject.Find("spaceship"));		
 			Destroy(klooni,2);
+			 Invoke("GameOverMan", 2);
+			
+			
 		}
+		
 	}
 	
 	
