@@ -5,7 +5,7 @@ public class MineSeekerController : MonoBehaviour {
 	
 	public GameObject light_halo;
 	public GameObject light_glow;
-	public GameObject player;
+	private GameObject player;
 	public float heat_seek_distance = 70.0f;
 	private bool heat_seeking = false;
 	private Vector3 move;
@@ -15,6 +15,7 @@ public class MineSeekerController : MonoBehaviour {
 		light_glow.light.enabled = false;
 		light_halo.light.enabled = false;
 		move = new Vector3(0.0f,-3.0f,0.0f);
+		player = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// Update is called once per frame
