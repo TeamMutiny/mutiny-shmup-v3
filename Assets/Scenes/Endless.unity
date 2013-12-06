@@ -3267,6 +3267,7 @@ GameObject:
   - 143: {fileID: 1691778037}
   - 114: {fileID: 1691778038}
   - 114: {fileID: 1691778040}
+  - 114: {fileID: 1691778039}
   m_Layer: 0
   m_Name: spaceship
   m_TagString: Player
@@ -3358,6 +3359,20 @@ MonoBehaviour:
   speed: 20
   rotationSpeed: 1
   maxRotation: 2
+--- !u!114 &1691778039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1691778032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e25ebc4cf650b40b615682b0beb5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSpeed: .100000001
+  laser: {fileID: 100000, guid: 967fb247eff8dfb4faaa65bcc6752f9f, type: 2}
+  laserActive: 0
 --- !u!114 &1691778040
 MonoBehaviour:
   m_ObjectHideFlags: 0
