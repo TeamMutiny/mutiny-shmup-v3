@@ -24,6 +24,10 @@ public class bossCollisionControler : MonoBehaviour {
 			Object bulletExpl = Instantiate(bulletHit,other.gameObject.transform.position,other.gameObject.transform.rotation);
 			Destroy(bulletExpl,2);
 			Destroy(other.gameObject);
+			if(other.gameObject.tag == "Player"){
+				GameObject.Find("HP bar").SendMessage("gotDead");
+				
+			}
 			//Debug.Log(hp);
 			if(hp < 0){
 				Object klooni = Instantiate(explosion,transform.position,transform.rotation);

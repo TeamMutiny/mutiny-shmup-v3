@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpawnerGroupScript : MonoBehaviour {
 
-	public float spawnInterval = 0.30f;
+	public float spawnInterval = 5f;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,5 +15,14 @@ public class SpawnerGroupScript : MonoBehaviour {
 	
 	}
 	
+	 void StopSpawner(){
+		BroadcastMessage("StopSpawn");
+		
+	}
+	
+	 void StartSpawner(){
+		BroadcastMessage("StartSpawn");
+		
+	}
 	
 }
