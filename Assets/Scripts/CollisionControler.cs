@@ -14,6 +14,10 @@ public class CollisionControler : MonoBehaviour {
 		
 	}
 	
+	void OnCollisionEnter(Collision collision) {
+		OnTriggerEnter(collision.collider);
+	}
+	
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "bullet" || other.gameObject.tag == "Player") {
 			
