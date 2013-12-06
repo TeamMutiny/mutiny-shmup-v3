@@ -40,5 +40,10 @@ public class HPbar : MonoBehaviour {
 		
 	}
 	
+	void gotDead(){
+		hp = 0;
+		
+	}
+	
 	
 }

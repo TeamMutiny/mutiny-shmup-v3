@@ -36,6 +36,16 @@ public class EnemySpawnerController : MonoBehaviour {
 		enemy_rotation.eulerAngles = new Vector3(180.0f, 0.0f,0.0f);
 	}
 	
+	void StopSpawn(){
+		state = State.STOPPED;
+		
+	}
+	
+	void StartSpawn(){
+		state = State.SPAWNING;
+		
+	}
+	
 	// Update is called once per frame
 	void Update () {
 		
@@ -82,4 +92,5 @@ public class EnemySpawnerController : MonoBehaviour {
 				
 		timer += Time.deltaTime;
 	}
+	
 }

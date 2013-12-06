@@ -25,9 +25,14 @@ public class MenuScript : MonoBehaviour {
 			Application.LoadLevel(1);
 			// New game
 		}
-
+		if(GUI.Button(new Rect(x,y+spacing*1,width,height), "Endless")) {
+			Application.LoadLevel(2);
+			// Quit
+		}
+		
 		// Make the second button.
-		if(GUI.Button(new Rect(x,y+spacing*1,width,height), "Quit")) {
+		if(GUI.Button(new Rect(x,y+spacing*2,width,height), "Quit")) {
+			Application.Quit();
 			// Quit
 		}
 	}
