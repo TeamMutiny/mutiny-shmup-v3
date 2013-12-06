@@ -19,7 +19,6 @@ public class EnemyProjectileOneWay : MonoBehaviour {
 	void setDirection(Vector3 rotation) {
 		Quaternion direction = new Quaternion();
 		direction.eulerAngles = rotation;
-		
 		gameObject.transform.rotation = direction;	
 	}
 }
