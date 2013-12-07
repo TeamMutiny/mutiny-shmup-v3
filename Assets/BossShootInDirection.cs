@@ -5,17 +5,23 @@ public class BossShootInDirection : MonoBehaviour {
 	
 	public GameObject bullet;
 	private float time;
-	
+	private bool shooting = false;
 	void Start(){
 		time = 0.0f;
 		
 	}
 	void Update(){
 		time += Time.deltaTime;
-		if(time > 0.5f){
+		if(time > 0.5f && shooting){
 			shootAtPlayer();
 			time = 0.0f;
 		}
+		
+	}
+	
+	
+	void StartShooting(){
+		shooting = true;
 		
 	}
 	
@@ -25,7 +31,6 @@ public class BossShootInDirection : MonoBehaviour {
 	}
 	
 	void shootAtPlayer() {
-	
 		GameObject newbullet = (GameObject)Instantiate(bullet, gameObject.transform.position, Quaternion.identity);
 		
 		GameObject player = GameObject.FindGameObjectWithTag("Player");

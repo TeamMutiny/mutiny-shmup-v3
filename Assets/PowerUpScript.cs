@@ -3,12 +3,13 @@ using System.Collections;
 
 public class PowerUpScript : MonoBehaviour {
 	
-	public float laserSpeed = 0.1f;
+	private float laserSpeed = 0.2f;
+	public float laserDuration = 3f;
 	public GameObject laser;
 	private GameObject activeLaser;
 	public bool laserActive = false;
 	private float timeActive = 0;
-	
+	private GameObject ship;
 	
 	
 	// Use this for initialization
@@ -18,11 +19,18 @@ public class PowerUpScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		ship  = (GameObject.Find("spaceship"));
 		if(laserActive){
 			timeActive += Time.deltaTime;
+			if(activeLaser.transform.localScale.y < 12f){
 			activeLaser.transform.localScale += new Vector3(0.0f,laserSpeed,0f);
-			activeLaser.transform.position = (GameObject.Find("spaceship").transform.position) + (new Vector3(0.0f,-10*laserSpeed,0f));
-			//
+			}
+			activeLaser.transform.position =ship.transform.position + (new Vector3(0.0f,(activeLaser.transform.localScale.y+0.1f),0f));
+			if(timeActive > laserDuration){
+				laserActive = false;
+				timeActive = 0;
+				Destroy(activeLaser);
+			}
 		}
 		
 	}
@@ -30,8 +38,12 @@ public class PowerUpScript : MonoBehaviour {
 	void PowerUp(string powerUpName){
 		
 		if(powerUpName.Equals("Laser")){
+			if(laserActive){
+				timeActive = 0;
+			}else{
 			activeLaser = (GameObject)Instantiate(laser, gameObject.transform.position, Quaternion.identity);
-			laserActive = true;
+			laserActive = true;	
+			}
 		}
 		
 	}

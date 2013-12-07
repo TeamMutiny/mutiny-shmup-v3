@@ -3370,7 +3370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e25ebc4cf650b40b615682b0beb5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserSpeed: .100000001
+  laserDuration: 3
   laser: {fileID: 100000, guid: 967fb247eff8dfb4faaa65bcc6752f9f, type: 2}
   laserActive: 0
 --- !u!114 &1691778040
@@ -3440,7 +3440,7 @@ GameObject:
   - 4: {fileID: 1825271839}
   - 114: {fileID: 1825271838}
   m_Layer: 0
-  m_Name: Level 1
+  m_Name: EndlessLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

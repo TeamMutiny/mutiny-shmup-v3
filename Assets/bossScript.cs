@@ -13,6 +13,7 @@ public class bossScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(!this.gameObject.animation.isPlaying){
+			BroadcastMessage("StartShooting");
 			this.gameObject.animation.Play("LeftToRight");
 			
 		}

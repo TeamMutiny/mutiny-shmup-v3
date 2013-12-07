@@ -19,7 +19,7 @@ public class CollisionControler : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider other) {
-		if(other.gameObject.tag == "bullet" || other.gameObject.tag == "Player") {
+		if(other.gameObject.tag == "bullet" || other.gameObject.tag == "Player" || other.gameObject.tag == "Laser") {
 			
 			 
 			Object klooni = Instantiate(explosion,transform.position,transform.rotation);
@@ -27,6 +27,11 @@ public class CollisionControler : MonoBehaviour {
 			Destroy(klooni,2);
 			Destroy(gameObject);
 			foo.SendMessage("tappo");
+			if(Random.value > 0.95f){
+				GameObject powerUp = Resources.Load("Powerup Laser") as GameObject;
+				klooni = Instantiate(powerUp,transform.position,transform.rotation);
+			}
 		}
+
 	}
 }

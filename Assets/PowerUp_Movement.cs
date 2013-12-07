@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PowerUp_Laser : MonoBehaviour {
+public class PowerUp_Movement : MonoBehaviour {
 	public float speed = 1.0f;
 	private Vector3 direction;
 	
@@ -12,7 +12,7 @@ public class PowerUp_Laser : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.transform.Translate((Vector3.down/100)*speed);
+		gameObject.transform.Translate((Vector3.up/100)*speed);
 		
 	}
 	
