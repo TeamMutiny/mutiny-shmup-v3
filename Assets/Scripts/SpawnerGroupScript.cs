@@ -4,6 +4,7 @@ using System.Collections;
 public class SpawnerGroupScript : MonoBehaviour {
 
 	public float spawnInterval = 5f;
+	public float mineInterval = 30f;
 	// Use this for initialization
 	void Start () {
 		
