@@ -52,6 +52,11 @@ public class PlayerController : MonoBehaviour {
 			alus.transform.Rotate(new Vector3(0,rotation,0));
 			
 		}
+		
+	 	if (Input.GetButton("Fire2")){
+			BroadcastMessage("ActivatePowerup");
+			
+		}
 		// alus.transform.rotation.y > -0.50
 			
 		

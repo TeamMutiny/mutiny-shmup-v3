@@ -23,6 +23,7 @@ public class PlayerShootingScript : MonoBehaviour {
 			timeSinceShot += Time.deltaTime;		
 		}
 		
+		
 	}
 }
 

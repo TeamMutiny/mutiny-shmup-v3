@@ -10,6 +10,7 @@ public class PowerUpScript : MonoBehaviour {
 	public bool laserActive = false;
 	private float timeActive = 0;
 	private GameObject ship;
+	private string storedPowerup;
 	
 	
 	// Use this for initialization
@@ -36,8 +37,16 @@ public class PowerUpScript : MonoBehaviour {
 	}
 	
 	void PowerUp(string powerUpName){
+		storedPowerup = powerUpName;
+		GameObject.Find("PowerUp").guiTexture.enabled = true;
+		GameObject.Find("PowerUp").guiTexture.texture = Resources.Load(powerUpName, typeof(Material)) as Texture;
 		
-		if(powerUpName.Equals("Laser")){
+		
+	}
+	
+	void ActivatePowerup(){
+		
+		if(storedPowerup.Equals("Laser")){
 			if(laserActive){
 				timeActive = 0;
 			}else{
@@ -46,5 +55,7 @@ public class PowerUpScript : MonoBehaviour {
 			}
 		}
 		
+		storedPowerup = "";
+		GameObject.Find("PowerUp").guiTexture.enabled = false;	
 	}
 }
