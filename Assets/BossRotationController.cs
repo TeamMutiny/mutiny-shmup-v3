@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MineRotationController : MonoBehaviour {
+public class BossRotationController : MonoBehaviour {
 
-	public float speed = 25.0f;
+	public float speed = 15.0f;
 	
 	// Use this for initialization
 	void Start () {
@@ -13,5 +13,10 @@ public class MineRotationController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		gameObject.transform.Rotate(new Vector3(0.0f,0.0f,1.0f) * Time.deltaTime * speed);
+	}
+	
+	void Reverse(){
+		speed = -speed;
+		
 	}
 }

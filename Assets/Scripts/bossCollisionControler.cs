@@ -40,7 +40,7 @@ public class bossCollisionControler : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) {
 		
-		if(other.gameObject.tag == "bullet" || other.gameObject.tag == "Player") {
+		if(other.gameObject.tag == "bullet" || other.gameObject.tag == "Player" || other.gameObject.tag == "EnemyMine") {
 
 			hp--;
 			Object bulletExpl = Instantiate(bulletHit,other.gameObject.transform.position,other.gameObject.transform.rotation);
@@ -54,7 +54,7 @@ public class bossCollisionControler : MonoBehaviour {
 			
 		}
 		
-		
+
 		
 		if(hp < 0){
 				Object klooni = Instantiate(explosion,transform.position,transform.rotation);
