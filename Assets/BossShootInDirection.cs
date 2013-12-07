@@ -21,7 +21,7 @@ public class BossShootInDirection : MonoBehaviour {
 			if(bossType.name.Equals("BOSS2")){
 				Debug.Log("what2");
 				Vector3 direction = new Vector3(bossType.transform.position.x -  gameObject.transform.position.x,bossType.transform.position.y- gameObject.transform.position.y,0f);
-				shootInDirection(direction);
+				shootAtPoint(new Vector3(1.0f,0.0f,0.0f));
 				
 			}
 			time = 0.0f;
