@@ -26,7 +26,7 @@ public class PowerUpScript : MonoBehaviour {
 			if(activeLaser.transform.localScale.y < 12f){
 			activeLaser.transform.localScale += new Vector3(0.0f,laserSpeed,0f);
 			}
-			activeLaser.transform.position =ship.transform.position + (new Vector3(0.0f,(activeLaser.transform.localScale.y+0.1f),0f));
+			activeLaser.transform.position =ship.transform.position + (new Vector3(0.0f,(activeLaser.transform.localScale.y+0.2f),0f));
 			if(timeActive > laserDuration){
 				laserActive = false;
 				timeActive = 0;
