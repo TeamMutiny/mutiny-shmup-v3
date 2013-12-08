@@ -62,6 +62,8 @@ public class bossCollisionControler : MonoBehaviour {
 
 		
 		if(hp < 0){
+				GameObject.Find("BossDestroySound").audio.Play();
+			
 				Object klooni = Instantiate(explosion,transform.position,transform.rotation);
 			    Destroy(klooni,2);
 				Destroy(gameObject);

@@ -32,6 +32,7 @@ public class MineSeekerController : MonoBehaviour {
 				heat_seeking = true;
 				light_glow.light.enabled = true;
 				light_halo.light.enabled = true;
+				gameObject.audio.Play();
 			}	
 		}
 		
