@@ -65,8 +65,8 @@ public class bossCollisionControler : MonoBehaviour {
 				Object klooni = Instantiate(explosion,transform.position,transform.rotation);
 			    Destroy(klooni,2);
 				Destroy(gameObject);
-				GameObject foo = GameObject.Find("Score");
-				foo.SendMessage("bossitappo");
+				GameObject score = GameObject.Find("Score");
+				score.SendMessage("bossitappo");
 			}
 	}
 }
