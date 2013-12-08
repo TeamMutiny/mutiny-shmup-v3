@@ -2198,7 +2198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 2dea6a4c7049549d1b6a9e2be5ba7bf1, type: 2}
       propertyPath: speed
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 2dea6a4c7049549d1b6a9e2be5ba7bf1, type: 2}
       propertyPath: m_ReceiveShadows
@@ -2263,6 +2263,10 @@ Prefab:
     - target: {fileID: 2300000, guid: 2dea6a4c7049549d1b6a9e2be5ba7bf1, type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: 2dea6a4c7049549d1b6a9e2be5ba7bf1, type: 2}
+      propertyPath: m_SlopeLimit
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400002, guid: 2dea6a4c7049549d1b6a9e2be5ba7bf1, type: 2}
@@ -4070,7 +4074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a678308dd8aaa32478e7425766e4b4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 12
   rotationSpeed: 1
   maxRotation: 2
 --- !u!114 &1691778039

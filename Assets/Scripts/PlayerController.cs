@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour {
 			moveDirection.Set(moveDirection.x,0,moveDirection.z);
 			
 		}
+		//gameObject.transform.position = gameObject.transform.position + moveDirection*Time.deltaTime*1.5f;
 		playerController.Move(moveDirection * Time.deltaTime*1.5f);
 		float rotation = rotationSpeed *Input.GetAxis("Horizontal");
 		if((alus.transform.rotation.y < (maxRotation/10) && Input.GetAxis("Horizontal") < 0) || (alus.transform.rotation.y > (-maxRotation/10) && Input.GetAxis("Horizontal") > 0)){ 
