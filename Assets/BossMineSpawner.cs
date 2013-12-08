@@ -25,7 +25,7 @@ public class BossMineSpawner : MonoBehaviour {
 	void SpawnMine(){
 		closed = false;
 		GameObject.Find("Wrap").animation.Play("portal_open");
-		Invoke("DelayedSpawn",1f);
+		Invoke("DelayedSpawn",0.5f);
 
 	}
 	
