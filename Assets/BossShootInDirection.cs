@@ -10,10 +10,10 @@ public class BossShootInDirection : MonoBehaviour {
 	private GameObject bossType;
 	void Start(){
 		bossType = gameObject.transform.parent.gameObject;
-		if(bossType.name.Equals("BOSS")){
+		if(bossType.name.Contains("BOSS1")){
 			shotInterval = 0.5f;
 		}
-		if(bossType.name.Equals("BOSS2")){
+		if(bossType.name.Contains("BOSS2")){
 			shotInterval = 0.3f;
 		}
 		time = 0.0f;
@@ -22,10 +22,10 @@ public class BossShootInDirection : MonoBehaviour {
 	void Update(){
 		time += Time.deltaTime;
 		if(time > shotInterval && shooting){
-			if(bossType.name.Equals("BOSS")){
+			if(bossType.name.Contains("BOSS1")){
 			shootAtPlayer();
 			}
-			if(bossType.name.Equals("BOSS2")){
+			if(bossType.name.Contains("BOSS2")){
 				Vector3 direction = new Vector3(bossType.transform.position.x -  gameObject.transform.position.x,bossType.transform.position.y- gameObject.transform.position.y,0f);
 				shootInDirection(-2*direction);
 				
@@ -48,7 +48,7 @@ public class BossShootInDirection : MonoBehaviour {
 	}
 	
 	void shootAtPlayer() {
-		GameObject newbullet = (GameObject)Instantiate(bullet, gameObject.transform.position, Quaternion.identity);
+		GameObject newbullet = (GameObject)Instantiate(bullet, new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,0f), Quaternion.identity);
 		
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		

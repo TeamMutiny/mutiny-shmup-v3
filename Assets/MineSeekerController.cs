@@ -5,7 +5,7 @@ public class MineSeekerController : MonoBehaviour {
 	
 	public GameObject light_halo;
 	public GameObject light_glow;
-	public float heat_seek_force = 1.2f;
+	private float heat_seek_force = 1.2f;
 	private GameObject player;
 	public float heat_seek_distance = 70.0f;
 	private bool heat_seeking = false;
@@ -35,5 +35,9 @@ public class MineSeekerController : MonoBehaviour {
 			}	
 		}
 		
+	}
+	void setBossMineMode(){
+		Debug.Log("sup");
+		heat_seek_distance = 1000f;
 	}
 }

@@ -27,9 +27,9 @@ public class CollisionControler : MonoBehaviour {
 			Destroy(klooni,2);
 			Destroy(gameObject);
 			foo.SendMessage("tappo");
-			if(Random.value > 0.95f){
+			if(Random.value > 0.98f){
 				GameObject powerUp = Resources.Load("Powerup Laser") as GameObject;
-				klooni = Instantiate(powerUp,transform.position,transform.rotation);
+				klooni = Instantiate(powerUp,transform.position, Quaternion.identity);
 			}
 		}
 

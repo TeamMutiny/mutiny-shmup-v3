@@ -41,8 +41,13 @@ public class bossCollisionControler : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		
 		if(other.gameObject.tag == "bullet" || other.gameObject.tag == "Player" || other.gameObject.tag == "EnemyMine") {
-
-			hp--;
+			
+			if(other.gameObject.tag == "bullet"){
+				hp--;
+			}
+			if(other.gameObject.tag == "EnemyMine"){
+				hp -= 10;
+			}
 			Object bulletExpl = Instantiate(bulletHit,other.gameObject.transform.position,other.gameObject.transform.rotation);
 			Destroy(bulletExpl,2);
 			Destroy(other.gameObject);

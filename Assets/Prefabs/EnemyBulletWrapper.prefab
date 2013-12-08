@@ -133,10 +133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f0a0c8a6fb64d489784b73e75e1d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min_y: -60
-  max_y: 60
-  min_x: -60
-  max_x: 60
+  min_y: -40
+  max_y: 50
+  min_x: -50
+  max_x: 50
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

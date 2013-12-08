@@ -10,7 +10,7 @@ public class PowerUpScript : MonoBehaviour {
 	public bool laserActive = false;
 	private float timeActive = 0;
 	private GameObject ship;
-	private string storedPowerup;
+	private string storedPowerup = null;
 	
 	
 	// Use this for initialization
@@ -46,7 +46,7 @@ public class PowerUpScript : MonoBehaviour {
 	
 	void ActivatePowerup(){
 		
-		if(storedPowerup.Equals("Laser")){
+		if(storedPowerup != null && storedPowerup.Equals("Laser")){
 			if(laserActive){
 				timeActive = 0;
 			}else{

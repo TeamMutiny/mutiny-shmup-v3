@@ -264,8 +264,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min_y: -20
   max_y: 60
-  min_x: -60
-  max_x: 60
+  min_x: -50
+  max_x: 50
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,7 +279,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   light_halo: {fileID: 100002}
   light_glow: {fileID: 100000}
-  heat_seek_force: 3
   heat_seek_distance: 300
 --- !u!114 &11400006
 MonoBehaviour:

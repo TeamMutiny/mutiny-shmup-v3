@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour {
 			moveDirection.Set(0,moveDirection.y,moveDirection.z);
 		
 		}
-		if( (alus.transform.localPosition.y < -15 && Input.GetAxis("Vertical") < 0) ||(alus.transform.localPosition.y > 40 && Input.GetAxis("Vertical") > 0)) {
+		if( (alus.transform.localPosition.y < -15 && Input.GetAxis("Vertical") < 0) ||(alus.transform.localPosition.y > 35 && Input.GetAxis("Vertical") > 0)) {
 			moveDirection.Set(moveDirection.x,0,moveDirection.z);
 			
 		}

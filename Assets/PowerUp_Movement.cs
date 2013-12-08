@@ -12,7 +12,7 @@ public class PowerUp_Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.transform.Translate((Vector3.up/100)*speed);
+		gameObject.transform.Translate((Vector3.down/100)*speed);
 		
 	}
 	
