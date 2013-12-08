@@ -30,6 +30,7 @@ public class HPbar : MonoBehaviour {
 		}
 		if(playerDead && Input.anyKeyDown){
 			Application.LoadLevel(0);
+			Time.timeScale = 1;
 			
 		}
 	}	
@@ -52,17 +53,18 @@ public class HPbar : MonoBehaviour {
 		
 		hp -= damage;
 		if(hp <= 0){
-			Object klooni = Instantiate(explosion,GameObject.Find("spaceship").transform.position,GameObject.Find("spaceship").transform.rotation);
-			Destroy(GameObject.Find("spaceship"));		
-			Destroy(klooni,2);
-			GameOverMan();
-			
+			gotDead();
 		}
 		
 	}
 	
 	void gotDead(){
 		hp = 0;
+		Object klooni = Instantiate(explosion,GameObject.Find("spaceship").transform.position,GameObject.Find("spaceship").transform.rotation);
+			Destroy(GameObject.Find("spaceship"));		
+			Destroy(klooni,2);
+			GameOverMan();
+			
 		
 	}
 	void playerDied(){
