@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dab1e1b2b2504ec6bd3d56c91804dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basic_enemy: {fileID: 100000, guid: cf1a5da4381fb40bb804a335b9789cbf, type: 2}
+  basic_enemy: {fileID: 100002, guid: 238c39106c2c1944892ae6d33cbf70d9, type: 2}
   anim_wrapper: {fileID: 100000, guid: 599ec77c21ca2864bb1c1031500505c4, type: 2}
   seqTime: 6
   seqInterval: 3
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dab1e1b2b2504ec6bd3d56c91804dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basic_enemy: {fileID: 100000, guid: cf1a5da4381fb40bb804a335b9789cbf, type: 2}
+  basic_enemy: {fileID: 100002, guid: 238c39106c2c1944892ae6d33cbf70d9, type: 2}
   anim_wrapper: {fileID: 100000, guid: 599ec77c21ca2864bb1c1031500505c4, type: 2}
   seqTime: 6
   seqInterval: 3
@@ -1773,7 +1773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dab1e1b2b2504ec6bd3d56c91804dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basic_enemy: {fileID: 100000, guid: cf1a5da4381fb40bb804a335b9789cbf, type: 2}
+  basic_enemy: {fileID: 100002, guid: 238c39106c2c1944892ae6d33cbf70d9, type: 2}
   anim_wrapper: {fileID: 100000, guid: 599ec77c21ca2864bb1c1031500505c4, type: 2}
   seqTime: 6
   seqInterval: 3
@@ -2899,7 +2899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dab1e1b2b2504ec6bd3d56c91804dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basic_enemy: {fileID: 100000, guid: cf1a5da4381fb40bb804a335b9789cbf, type: 2}
+  basic_enemy: {fileID: 100002, guid: 238c39106c2c1944892ae6d33cbf70d9, type: 2}
   anim_wrapper: {fileID: 100000, guid: 599ec77c21ca2864bb1c1031500505c4, type: 2}
   seqTime: 6
   seqInterval: 3
@@ -3157,7 +3157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dab1e1b2b2504ec6bd3d56c91804dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basic_enemy: {fileID: 100000, guid: cf1a5da4381fb40bb804a335b9789cbf, type: 2}
+  basic_enemy: {fileID: 100002, guid: 238c39106c2c1944892ae6d33cbf70d9, type: 2}
   anim_wrapper: {fileID: 100000, guid: 599ec77c21ca2864bb1c1031500505c4, type: 2}
   seqTime: 6
   seqInterval: 3
@@ -3441,7 +3441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dab1e1b2b2504ec6bd3d56c91804dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basic_enemy: {fileID: 100000, guid: cf1a5da4381fb40bb804a335b9789cbf, type: 2}
+  basic_enemy: {fileID: 100002, guid: 238c39106c2c1944892ae6d33cbf70d9, type: 2}
   anim_wrapper: {fileID: 100000, guid: 599ec77c21ca2864bb1c1031500505c4, type: 2}
   seqTime: 6
   seqInterval: 3
@@ -3590,7 +3590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dab1e1b2b2504ec6bd3d56c91804dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basic_enemy: {fileID: 100000, guid: cf1a5da4381fb40bb804a335b9789cbf, type: 2}
+  basic_enemy: {fileID: 100002, guid: 238c39106c2c1944892ae6d33cbf70d9, type: 2}
   anim_wrapper: {fileID: 100000, guid: 599ec77c21ca2864bb1c1031500505c4, type: 2}
   seqTime: 6
   seqInterval: 3
@@ -4392,7 +4392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dab1e1b2b2504ec6bd3d56c91804dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basic_enemy: {fileID: 100000, guid: cf1a5da4381fb40bb804a335b9789cbf, type: 2}
+  basic_enemy: {fileID: 100002, guid: 238c39106c2c1944892ae6d33cbf70d9, type: 2}
   anim_wrapper: {fileID: 100000, guid: 599ec77c21ca2864bb1c1031500505c4, type: 2}
   seqTime: 6
   seqInterval: 3
@@ -5761,7 +5761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dab1e1b2b2504ec6bd3d56c91804dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basic_enemy: {fileID: 100000, guid: cf1a5da4381fb40bb804a335b9789cbf, type: 2}
+  basic_enemy: {fileID: 100002, guid: 238c39106c2c1944892ae6d33cbf70d9, type: 2}
   anim_wrapper: {fileID: 100000, guid: 599ec77c21ca2864bb1c1031500505c4, type: 2}
   seqTime: 6
   seqInterval: 3
