@@ -27,7 +27,7 @@ public class bossCollisionControler : MonoBehaviour {
 		
 		if(other.gameObject.tag == "Laser" && !laserHitCooldown){
 			Vector3 hitLocation = other.ClosestPointOnBounds(gameObject.transform.position);
-			Debug.Log(hp);
+//			Debug.Log(hp);
 			hp--;
 			Object bulletExpl = Instantiate(bulletHit,hitLocation,other.transform.rotation);
 			Destroy(bulletExpl,2);
@@ -52,7 +52,7 @@ public class bossCollisionControler : MonoBehaviour {
 			Destroy(bulletExpl,2);
 			Destroy(other.gameObject);
 			if(other.gameObject.tag == "Player"){
-			GameObject.Find("HP bar").SendMessage("gotDead");
+			GameObject.Find("Hp bar").SendMessage("gotDead");
 			}
 			//Debug.Log(hp);
 			

@@ -35,7 +35,6 @@ public class Boss2Script : MonoBehaviour {
 				float distance = Mathf.Infinity;
 				Vector3 SpawnPoint = new Vector3(5f,0f,0f);
 				foreach(Vector3 location in mineSpawnLocations){
-					Debug.Log("WAS");
 					Vector3 diff = location - player.transform.position;
 					float curDistance = diff.sqrMagnitude;
 					if (curDistance < distance) {

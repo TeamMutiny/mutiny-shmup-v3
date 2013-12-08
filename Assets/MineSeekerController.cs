@@ -37,7 +37,6 @@ public class MineSeekerController : MonoBehaviour {
 		
 	}
 	void setBossMineMode(){
-		Debug.Log("sup");
 		heat_seek_distance = 1000f;
 	}
 }

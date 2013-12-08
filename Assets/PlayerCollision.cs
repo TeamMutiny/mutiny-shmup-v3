@@ -10,7 +10,7 @@ public class PlayerCollision : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "Enemy") {
-			GameObject.Find("Hp bar").SendMessage("GotHit", 5.0f);
+			GameObject.Find("Hp bar").SendMessage("GotHit", 10.0f);
 			
 		}
 		

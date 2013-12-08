@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PowerUpScript : MonoBehaviour {
 	
-	private float laserSpeed = 0.2f;
+	private float laserSpeed = 0.5f;
 	public float laserDuration = 3f;
 	public GameObject laser;
 	private GameObject activeLaser;

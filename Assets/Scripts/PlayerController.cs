@@ -30,11 +30,11 @@ public class PlayerController : MonoBehaviour {
 			moveDirection.Set(0,moveDirection.y,moveDirection.z);
 		
 		}
-		if( (alus.transform.localPosition.y < -15 && Input.GetAxis("Vertical") < 0) ||(alus.transform.localPosition.y > 35 && Input.GetAxis("Vertical") > 0)) {
+		if( (alus.transform.localPosition.y < -15 && Input.GetAxis("Vertical") < 0) ||(alus.transform.localPosition.y > 21 && Input.GetAxis("Vertical") > 0)) {
 			moveDirection.Set(moveDirection.x,0,moveDirection.z);
 			
 		}
-		playerController.Move(moveDirection * Time.deltaTime);
+		playerController.Move(moveDirection * Time.deltaTime*1.5f);
 		float rotation = rotationSpeed *Input.GetAxis("Horizontal");
 		if((alus.transform.rotation.y < (maxRotation/10) && Input.GetAxis("Horizontal") < 0) || (alus.transform.rotation.y > (-maxRotation/10) && Input.GetAxis("Horizontal") > 0)){ 
 		rotation = rotationSpeed *Input.GetAxis("Horizontal");

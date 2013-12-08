@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.61653709, y: -32.1773682, z: -118.056595}
+  m_LocalPosition: {x: -80, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,7 +44,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -80,8 +80,10 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 126857362d8750c45b65fd66a78a6da2, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 126857362d8750c45b65fd66a78a6da2, type: 2}
+  - {fileID: 7400000, guid: 64159abd27f7dc345a5ac4f7ec309767, type: 2}
+  - {fileID: 7400000, guid: cdb4516027a36fd4b987a7de6e62655e, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
   m_UserAABB:
@@ -100,8 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min_y: -20
   max_y: 50
-  min_x: -40
-  max_x: 40
+  min_x: -85
+  max_x: 85
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

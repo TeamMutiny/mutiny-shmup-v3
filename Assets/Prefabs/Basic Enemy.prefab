@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Basic Enemy
   m_TagString: Enemy
@@ -107,6 +108,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 100002, guid: c4b3a3793935c9d4dba29e2a9981d4ee, type: 2}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f0a0c8a6fb64d489784b73e75e1d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min_y: -20
+  max_y: 50
+  min_x: -50
+  max_x: 50
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
