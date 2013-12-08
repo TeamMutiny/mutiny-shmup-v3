@@ -25,6 +25,9 @@ public class HPbar : MonoBehaviour {
 		bar.guiTexture.pixelInset = new Rect(bar.guiTexture.pixelInset.x,bar.guiTexture.pixelInset.y,hp*1.28f,bar.guiTexture.pixelInset.height);
 		text.guiText.text = ""+hp;
 		
+		if(playerDead && Time.timeScale > 0){
+			Time.timeScale -= Time.deltaTime;
+		}
 		if(playerDead && Input.anyKeyDown){
 			Application.LoadLevel(0);
 			
