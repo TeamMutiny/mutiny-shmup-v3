@@ -8,6 +8,7 @@ public class PlayerShootingScript : MonoBehaviour {
 	public float ShotInterval = 1.0f;
 	private float timeSinceShot = 0.0f;
 	private Transform projectileTransform;
+	private bool shooting = true;
 	
 	void Start() {
 		projectileTransform = transform;	
@@ -15,15 +16,24 @@ public class PlayerShootingScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButton("Fire1") && timeSinceShot > ShotInterval/10) {			
-			GameObject pr = (GameObject) Instantiate(playerProjectile, projectileTransform.position, Quaternion.identity);
-			pr.SendMessage("setSpeed",new Vector3(0.0f,0.5f,0.0f));
-			timeSinceShot = 0;
-		}else{
-			timeSinceShot += Time.deltaTime;		
+		if(shooting){
+			if(Input.GetButton("Fire1") && timeSinceShot > ShotInterval/10) {			
+				GameObject pr = (GameObject) Instantiate(playerProjectile, projectileTransform.position, Quaternion.identity);
+				pr.SendMessage("setSpeed",new Vector3(0.0f,0.5f,0.0f));
+				timeSinceShot = 0;
+			}else{
+				timeSinceShot += Time.deltaTime;		
+			}
+			
 		}
-		
-		
+	}
+	
+	void Shooting(){
+		if(shooting){
+			shooting = false;
+		}else{
+			shooting = true;
+		}
 	}
 }
 

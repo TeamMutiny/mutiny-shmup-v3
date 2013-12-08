@@ -84,6 +84,7 @@ GameObject:
   - 4: {fileID: 14702037}
   - 131: {fileID: 14702038}
   - 111: {fileID: 14702039}
+  - 114: {fileID: 14702040}
   m_Layer: 0
   m_Name: Tausta
   m_TagString: Untagged
@@ -139,6 +140,17 @@ Animation:
   m_UserAABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
+--- !u!114 &14702040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 14702036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14d55478f06e4d449d38fe82d920d4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &495407640
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +220,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1267146568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1420041467}
@@ -241,7 +253,7 @@ GameObject:
   - 4: {fileID: 1420041467}
   - 132: {fileID: 1420041468}
   m_Layer: 0
-  m_Name: GUI Text
+  m_Name: MutinyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +266,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1420041466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0500000007, y: .720000029, z: .100000001}
+  m_LocalPosition: {x: .0500000007, y: .899999976, z: .100000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1267146569}
@@ -272,9 +284,9 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 8177c93b961e69e4da0c44954a24f8c5, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 32
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -292,21 +304,13 @@ GameObject:
   - 20: {fileID: 1957156434}
   - 92: {fileID: 1957156433}
   - 124: {fileID: 1957156432}
-  - 81: {fileID: 1957156431}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MenuCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1957156431
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1957156430}
-  m_Enabled: 1
 --- !u!124 &1957156432
 Behaviour:
   m_ObjectHideFlags: 0

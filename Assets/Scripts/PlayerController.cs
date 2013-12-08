@@ -11,12 +11,14 @@ public class PlayerController : MonoBehaviour {
 	private float maxX = 30;
 	private float minX = -30;
 	private Vector3 moveDirection;
+	private bool paused = false;
+	private GameObject hpBar;
 	
 	// Use this for initialization
 	void Start () {
 		alus = GameObject.Find("spaceship");
 		moveDirection = new Vector3(0.0f,0.0f,0.0f);
-		
+		hpBar = GameObject.Find("Hp bar");
 		playerController = GetComponent<CharacterController>();
 	}
 	
@@ -57,9 +59,32 @@ public class PlayerController : MonoBehaviour {
 			BroadcastMessage("ActivatePowerup");
 			
 		}
+		
+		if (Input.GetButtonDown("Menu")){
+			
+			if(!paused){
+			BroadcastMessage("Shooting");
+			Application.LoadLevelAdditive(0);
+			Time.timeScale = 0;
+			hpBar.SetActive(false);
+			paused = true;
+			}else{
+				ResumeGame();
+			}
+			
+		}
 		// alus.transform.rotation.y > -0.50
 			
 		
 		
+	}
+	
+	void ResumeGame(){
+		BroadcastMessage("Shooting");
+		Destroy(GameObject.Find("MenuCamera"));
+		Destroy(GameObject.Find("Menu"));
+		hpBar.SetActive(true);
+		Time.timeScale = 1f;
+		paused = false;
 	}
 }
