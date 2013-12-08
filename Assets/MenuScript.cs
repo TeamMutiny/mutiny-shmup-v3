@@ -3,6 +3,10 @@ using System.Collections;
 
 public class MenuScript : MonoBehaviour {
 	
+	public GameObject game_help_object;
+	
+	private bool show_help = true;
+	
 	public int x = 50;
 	public int y = 220;
 	public int width = 120;
@@ -33,8 +37,14 @@ public class MenuScript : MonoBehaviour {
 				// Quit
 			}
 			
+			if(GUI.Button(new Rect(x,y+spacing*2,width,height), "Help")) {
+				game_help_object.SetActive(show_help);
+				show_help = !show_help;
+				// Show help
+			}
+			
 			// Make the second button.
-			if(GUI.Button(new Rect(x,y+spacing*2,width,height), "Quit")) {
+			if(GUI.Button(new Rect(x,y+spacing*3,width,height), "Quit")) {
 				Application.Quit();
 				// Quit
 			}
@@ -44,7 +54,12 @@ public class MenuScript : MonoBehaviour {
 				Application.LoadLevel(1);
 				// New game
 			}
-			if(GUI.Button(new Rect(x,y+spacing*1,width,height), "Quit")) {
+			if(GUI.Button(new Rect(x,y+spacing*1,width,height), "Help")) {
+				game_help_object.SetActive(show_help);
+				show_help = !show_help;
+				// Show help
+			}
+			if(GUI.Button(new Rect(x,y+spacing*2,width,height), "Quit")) {
 				Application.Quit();
 				// Quit
 			}
