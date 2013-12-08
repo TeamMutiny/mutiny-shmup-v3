@@ -30,8 +30,9 @@ public class Boss2Script : MonoBehaviour {
 				GameObject.FindWithTag("BOSS2").SendMessage("Reverse");
 				rotationTime = 0;
 			}
-			if( mineSpawnTime > mineSpawnInterval){
-				GameObject player = GameObject.Find("spaceship");
+			GameObject player = GameObject.Find("spaceship");
+			if( player != null && mineSpawnTime > mineSpawnInterval){
+				
 				float distance = Mathf.Infinity;
 				Vector3 SpawnPoint = new Vector3(5f,0f,0f);
 				foreach(Vector3 location in mineSpawnLocations){
