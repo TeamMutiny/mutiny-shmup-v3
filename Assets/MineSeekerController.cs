@@ -21,14 +21,14 @@ public class MineSeekerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(heat_seeking) {
+		if(player != null && heat_seeking) {
 			gameObject.rigidbody.AddForce(player.transform.position-heat_seek_force*gameObject.transform.position);
 		}
 		else {
 			// Just move forward if not heat seeking
 			gameObject.rigidbody.AddForce(move);
 			
-			if((gameObject.transform.position - player.transform.position).sqrMagnitude < heat_seek_distance) {
+			if(player != null && ((gameObject.transform.position - player.transform.position).sqrMagnitude < heat_seek_distance)) {
 				heat_seeking = true;
 				light_glow.light.enabled = true;
 				light_halo.light.enabled = true;
