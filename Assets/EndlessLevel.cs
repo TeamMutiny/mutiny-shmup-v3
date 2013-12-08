@@ -18,6 +18,7 @@ public class EndlessLevel: MonoBehaviour {
 		Color newColor = new Color( Random.value, Random.value, Random.value, 1.0f );
 		GameObject.Find("background1").gameObject.renderer.material.color = newColor;
 		GameObject.Find("background2").gameObject.renderer.material.color = newColor;
+		warning = Resources.Load("Warning") as GameObject;
 		time = 0;
 
 
@@ -42,13 +43,13 @@ public class EndlessLevel: MonoBehaviour {
 			}
 			
 			if(!warningDone){
-			warning = GameObject.Find("Warning");
-			warning.transform.position = new Vector3(0.5f,0.4851f,0f);
-			Destroy(warning, warningTime);
+			Object warningClone = Instantiate(warning,new Vector3(0.5f,0.5f,0.5f),transform.rotation);
+			Destroy(warningClone, warningTime);
 			warningDone = true;
 			}
 		}
 		if(time > bossTime && bossFight && boss == null){
+			warningDone = false;
 			Color newColor = new Color( Random.value, Random.value, Random.value, 1.0f );
 			GameObject.Find("background1").gameObject.renderer.material.color = newColor;
 			GameObject.Find("background2").gameObject.renderer.material.color = newColor;

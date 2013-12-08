@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 		moveDirection *= speed;
 		if((alus.transform.localPosition.x > maxX && Input.GetAxis("Horizontal") > 0 ) || (alus.transform.localPosition.x < minX && Input.GetAxis("Horizontal") < 0 )){ 
@@ -73,6 +74,8 @@ public class PlayerController : MonoBehaviour {
 			}
 			
 		}
+		
+		
 		// alus.transform.rotation.y > -0.50
 			
 		
